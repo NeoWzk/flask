@@ -15,7 +15,6 @@ This will keep all the notes while I am learning coding with Flask
 		2.3. import many macros from a html file
 			{% from 'macro.html' import input, render_content %}
 
-
 # templates inherited
 	1. including file(not support editting of block content, including all the content from the parent file)
 		{% include 'base.html' %}
