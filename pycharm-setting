@@ -1,0 +1,8 @@
+This will just keep a clue for how to do the basic configuration of pycharm for python development
+
+# jinja2 autocomplete
+	1. create a templates folder
+	2. right-click on the templates folder
+	3. move to "Mark Directory as" on the dropdown menu
+	4. select "Template Folder" option from "Mark Directory as" menu
+	5. choose "jinja2" as the template for "Python language templates"
