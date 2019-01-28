@@ -21,3 +21,14 @@ This will keep all the notes while I am learning coding with Flask
 	2. extends file(inherit from parent file and support editting block content)
 		{% extends 'base.html' %}
 
+
+# block
+	1. define block
+		{% block block_name %}
+			content(optional)
+		{% endblock %}
+	2. using block(content must be put in the relative block defined in the parent file, or content will not rendered)
+		{% block block_name %}
+			custom content here
+		{% endblock %}
+			**message outside this block will not rendered!**
