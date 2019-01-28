@@ -1,0 +1,16 @@
+This will keep all the notes while I am learning coding with Flask
+
+# macro
+	1. in the same file(few macro involved)
+		1.1. create macro
+			{% macro input(name,value,type,placeholder) %}
+				input(name="{{ name }}",value="{{ vlaue }}",type="{{ type }}",placeholder="{{placeholder}}")
+			{% endmacro %}
+		1.2. using macro
+			{{input(type="text",placeholder="username")}}
+	2. store macros in a html file(many macros involved)
+		2.1. create macros
+		2.2. import one macro from a html file
+			{% from 'macro.html' import input as inp %}
+		2.3. import many macros from a html file
+			{% from 'macro.html' import input, render_content %}
