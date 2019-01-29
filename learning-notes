@@ -32,3 +32,8 @@ This will keep all the notes while I am learning coding with Flask
 			custom content here
 		{% endblock %}
 			**message outside this block will not rendered!**
+# get relative path using url_for() function
+	1.  using css/js/images(stored in "static" folder)
+		{{ url_for('static',filename='css/bootstrap.css') }}
+	2. get relative path of view function
+		{{ url_for('login') }} # return /login/
