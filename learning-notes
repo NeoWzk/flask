@@ -15,6 +15,7 @@ This will keep all the notes while I am learning coding with Flask
 		2.3. import many macros from a html file
 			{% from 'macro.html' import input, render_content %}
 
+
 # templates inherited
 	1. including file(not support editting of block content, including all the content from the parent file)
 		{% include 'base.html' %}
@@ -31,19 +32,23 @@ This will keep all the notes while I am learning coding with Flask
 		{% block block_name %}
 			custom content here
 		{% endblock %}
-			**message outside this block will not rendered!**
+		**message outside this block will not rendered!**
+	3. using super() in block
+		3.1. super(): add new content and keep old content
+		3.2. if super() not applied, new content will replace all the old content
+		
+		
 # get relative path using url_for() function
 	1.  using css/js/images(stored in "static" folder)
 		{{ url_for('static',filename='css/bootstrap.css') }}
 	2. get relative path of view function
 		{{ url_for('login') }} # return /login/
 
+
 # filter
 	1. using filter for the value
 		{{ value|filter_name }} # built-in filters on site: http://jinja.pocoo.org/docs/templates/#builtin-filters
 		
 		
-		
-
 # Retrieving data from dict/list/object
 	1. {{ mydict['key']}}, {{ mylist['index'] }}, {{ myobj.myfunc() }}
