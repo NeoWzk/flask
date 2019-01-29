@@ -52,3 +52,14 @@ This will keep all the notes while I am learning coding with Flask
 		
 # Retrieving data from dict/list/object
 	1. {{ mydict['key']}}, {{ mylist['index'] }}, {{ myobj.myfunc() }}
+	
+
+# custom error page
+	1. define route for error page
+		@app.errorhandler(404)
+		def notFound(e)
+			return render_template('404.html', code=404)
+			
+			
+
+			
