@@ -37,6 +37,12 @@ This will keep all the notes while I am learning coding with Flask
 		{{ url_for('static',filename='css/bootstrap.css') }}
 	2. get relative path of view function
 		{{ url_for('login') }} # return /login/
+
+# filter
+	1. using filter for the value
+		{{ value|filter_name }} # built-in filters on site: http://jinja.pocoo.org/docs/templates/#builtin-filters
+		
+		
 		
 
 # Retrieving data from dict/list/object
