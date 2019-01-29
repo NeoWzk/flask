@@ -37,3 +37,7 @@ This will keep all the notes while I am learning coding with Flask
 		{{ url_for('static',filename='css/bootstrap.css') }}
 	2. get relative path of view function
 		{{ url_for('login') }} # return /login/
+		
+
+# Retrieving data from dict/list/object
+	1. {{ mydict['key']}}, {{ mylist['index'] }}, {{ myobj.myfunc() }}
