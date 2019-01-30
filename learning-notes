@@ -59,8 +59,21 @@ This will keep all the notes while I am learning coding with Flask
 		@app.errorhandler(404)
 		def notFound(e)
 			return render_template('404.html', code=404)
-			
-			
+	
+# flask_moment js extension
+	1. initiate moment.js
+		from flask_moment import Moment
+		moment = Moment(app)
+	2. call moment.js in html file
+		{% block scripts %}
+			{{ super() }}
+			{{ moment.include_moment() }}
+			{{ moment.lang('en')}} # display in local language
+		{% endblock %}
+	3. display time with moment.js
+		{{ moment(datetime.utcnow()).format('LLL')}} # fromat: L-LLLL 0-4 levels time display from short type to long type
+		
+		
 # flask_wtf forms
 	1. create a form
 		from flask_wtf import FlaskForm
