@@ -76,7 +76,7 @@ This will keep all the notes while I am learning coding with Flask
 	
 	3. using forms in a more effective way
 		3.1. create wtf.py and create form in this file just as instructions above
-		3.2. call myForm from wtf.py
+		3.2. call myForm from wtf.py in run_app.py(main file for all view funcs) 
 			from wtf.py import myForm
 		3.3. create wtf.html and create macros
 			{% macro loginForm(myForm) %} # form will be passed through view func
