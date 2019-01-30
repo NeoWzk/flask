@@ -76,7 +76,9 @@ This will keep all the notes while I am learning coding with Flask
 	
 	3. using forms in a more effective way
 		3.1. create wtf.py and create form in this file just as instructions above
-		3.2. create wtf.html and create macros
+		3.2. call myForm from wtf.py
+			from wtf.py import myForm
+		3.3. create wtf.html and create macros
 			{% macro loginForm(myForm) %} # form will be passed through view func
 				{{ myForm.name.label }}:{{ myForm.name() }}
 			{% endmacro %}
@@ -84,7 +86,7 @@ This will keep all the notes while I am learning coding with Flask
 			{% macro signUp(myForm) %} # form will be passed through view func
 				{{ myForm.name.label }}:{{ myForm.name() }}
 			{% endmacro %}
-		3.3. import macro in another html file
+		3.4. import macro in another html file
 			{% import 'macro/wtf.html' as wtf %}
 			<form method="post">
 				{{ wtf.loginForm(myForm) }}
