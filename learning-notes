@@ -113,4 +113,13 @@ This will keep all the notes while I am learning coding with Flask
 			</form>
 			
 
+# flask browser session manipulation
+	1. call session function
+		from flask import session
+	2. session is just the same as python dictionary, assign new var to session
+		session['name'] = form.name.data
+	3. retrive data saved in session
+		{{ session.get('name') }}
+	4. session will be terminated after client closed.
+	
 
