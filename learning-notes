@@ -75,6 +75,13 @@ This will keep all the notes while I am learning coding with Flask
 		
 		
 # flask_wtf forms
+	## IMPORTANT ##
+	
+	All the fields must be put in the html file that you want to render, if any field missed, the function form.validate_on_submit
+	will ONLY RETURN False
+	
+	## IMPORTANT ##
+	
 	1. create a form
 		from flask_wtf import FlaskForm
 		from wtforms.validator import Datarequired, Email
