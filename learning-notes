@@ -80,6 +80,10 @@ This will keep all the notes while I am learning coding with Flask
 	All the fields must be put in the html file that you want to render, if any field missed, the function form.validate_on_submit
 	will ONLY RETURN False
 	
+	ESPECIALLY FOR RadioField, it must be setup as a tuple list with strings: 
+	CORRECT: choices=[('1','Male'),('2','Female')]
+	WRONG: choices=[(1,'Male'),(2,'Female')]
+	
 	## IMPORTANT ##
 	
 	1. create a form
