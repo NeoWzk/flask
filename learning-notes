@@ -115,6 +115,11 @@ This will keep all the notes while I am learning coding with Flask
 			<form method="post">
 				{{ wtf.loginForm(myForm) }}
 			</form>
+		3.5. styling forms with bootstrap css
+			3.5.1. styling in form class:
+				name = StringField(validators=[Datarequired()],render_kw={'class':'form-control', 'autofocus':'autofocus'})
+			3.5.2. styling in html file:
+				{{ form.name(class='form-control',autofocus='autofocus') }}
 			
 
 # flask browser session manipulation
