@@ -145,6 +145,25 @@ This will keep all the notes while I am learning coding with Flask
 
 
 
+#flask-migrate
+	1. simple usage of migrate:
+		1.1. apply any changes to the db.Model without affecting the existing data, like add/delete columns from db.Model
+		
+	2. setup migrate commands
+		1.1. import libs
+		from flask_script import Manager
+		from flask_migrate import Migrate, MigrateCommand
+
+		1.2. initiate command 
+		migrate = Migrate(app, db)
+		manager.add_command('db', MigrateCommand)
+
+	3. apply migrate command in console
+		python app.py db migrate -m 'any msg'
+		python app.py db upgrade/downgrade # make the migrate take effects
+		python app.py db --help # show up more command hints
+			
+	
 
 
 
