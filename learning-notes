@@ -165,6 +165,47 @@ This will keep all the notes while I am learning coding with Flask
 			
 	
 
+#flask_mail
+	1. mail configurations:
+		configuration options:
+			MAIL_SERVER : default ‘localhost’
+			MAIL_PORT : default 25
+			MAIL_USE_TLS : default False
+			MAIL_USE_SSL : default False
+			MAIL_DEBUG : default app.debug
+			MAIL_USERNAME : default None
+			MAIL_PASSWORD : default None
+			MAIL_DEFAULT_SENDER : default None
+			MAIL_MAX_EMAILS : default None
+			MAIL_SUPPRESS_SEND : default app.testing
+			MAIL_ASCII_ATTACHMENTS : default False
+
+	2. bulk mails in single connection(some mail sever might have mail limits, use MAIL_MAX_EMAILS = 100 to control)
+
+		with mail.connect() as conn:
+			for user in users:
+				msg = Message(subject='', html='',recipients=[user['email']])
+				conn.send(msg)
+				
+
+	3. sent with attachment
+
+		with app.open_resource('image.png') as att:
+			msg.attch(filename='image.png',content_type='image/png', data=att.read())
+		
+		mail.send(msg)
+			
+
+	4. body and html message
+		if applying both body and html msg, only html content will be sent
+ 
+
+
+
+
+
+
+
 
 
 	
