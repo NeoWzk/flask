@@ -198,12 +198,20 @@ This will keep all the notes while I am learning coding with Flask
 
 	4. body and html message
 		if applying both body and html msg, only html content will be sent
+
+
+	5. speed up sending mails in asyncronized way:
+		from threading import Thread
+		def async_mail(app, msg):
+			with app.app_context():
+				mail.send(msg)
+
+		def send_mail(subject, recipients, template, **kwargs):
+			...
+			msg = ''
+			th = Thread(target=async_mail,args=(app, msg))
+			th.start()
  
-
-
-
-
-
 
 
 
