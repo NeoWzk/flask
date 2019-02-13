@@ -130,5 +130,19 @@ This will keep all the notes while I am learning coding with Flask
 	3. retrive data saved in session
 		{{ session.get('name') }}
 	4. session will be terminated after client closed.
+
+
+# flask_sqlalchemy
+	1. "1 to n" relationship
+		#for '1' side using db.relationship('model_name',backref='defined_ref_name')
+		#for 'n' side using db.Foreignkey('tablename.column_name')
+	2. convert '1 to n' relationship to '1 to 1' relationship
+		add 'uselist=False' in db.relationship()
+
+
+
+
+
+
 	
 
