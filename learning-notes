@@ -1,5 +1,28 @@
 This will keep all the notes while I am learning coding with Flask
 
+# create virtual environment for project
+	# purpose of using virtualenv: 
+	        ##stand-alone env for each project, no affects for system python environment
+		## no affects to other projects
+
+	1. install virtualenv: 
+		pip install virtualenv
+
+	2. create individual env for a project(environment folder usually stay in project folder):
+		virtualenv --system-site-packages --python=/usr/bin/python3.5 env_folder_name
+
+	3. delete/remove existing virtualenv:
+		sudo rm -rf env_folder
+
+	4. create a requirements.txt(in status of activate):
+		pip freeze > requirements.txt
+
+	5. install packages by requirements.txt(in status of activate):
+		pip install -r requirements.txt
+		
+
+
+
 # macro
 	1. in the same file(few macro involved)
 		1.1. create macro
