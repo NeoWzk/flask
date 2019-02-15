@@ -27,7 +27,7 @@ This will keep all the notes while I am learning coding with Flask
 	Project_folder
 		|app
 			|main
-				|__init__.py
+				|__init__.py(Initiate Blueprint)
 				|errors.py
 				|forms.py
 				|views.py
@@ -41,7 +41,7 @@ This will keep all the notes while I am learning coding with Flask
 				|mail
 					|new_user.html
 					|comment.html
-			|__init__.py
+			|__init__.py(initiate all the extensions)
 			|mail.py
 			|models.py
 		|venv
