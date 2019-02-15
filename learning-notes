@@ -22,37 +22,6 @@ This will keep all the notes while I am learning coding with Flask
 		
 
 
-# project constructures
-	
-	Project_folder
-		|app
-			|main
-				|__init__.py(Initiate Blueprint)
-				|errors.py
-				|forms.py
-				|views.py
-			|static
-				|css
-				|js
-				|images
-			|templates
-				|macro
-					|wtf.html
-				|mail
-					|new_user.html
-					|comment.html
-			|__init__.py(initiate all the extensions)
-			|mail.py
-			|models.py
-		|venv
-		|migrations
-		|config.py
-		|manage.py
-		|requirements.txt
-
-
-
-
 # macro
 	1. in the same file(few macro involved)
 		1.1. create macro
@@ -267,5 +236,33 @@ This will keep all the notes while I am learning coding with Flask
  
 
 
+# project structures
+	# a simple structure of a micro project
+	
+	Project_folder
+		|app
+			|main
+				|__init__.py(Initiate Blueprint)
+				|errors.py
+				|forms.py
+				|views.py
+			|static
+				|css
+				|js
+				|images
+			|templates
+				|macro
+					|wtf.html
+				|mail
+					|new_user.html
+					|comment.html
+			|__init__.py(initiate all the extensions)
+			|mail.py
+			|models.py
+		|venv
+		|migrations
+		|config.py
+		|manage.py
+		|requirements.txt
 
 
