@@ -81,6 +81,11 @@ This will keep all the notes while I am learning coding with Flask
 		@app.errorhandler(404)
 		def notFound(e)
 			return render_template('404.html', code=404)
+	2. customize error page in Blueprint
+		@blueprint_name.app_errorhandler(404)
+		def notFound(e):
+		return render_template('404.html', 404)
+		
 	
 # flask_moment js extension
 	1. initiate moment.js
@@ -164,12 +169,14 @@ This will keep all the notes while I am learning coding with Flask
 
 	3. convert '1 to n' relationship to '1 to 1' relationship
 		add 'uselist=False' in db.relationship()
+		
+	4. 'n to n' relationship
 
 
 
 #flask-migrate
 	1. simple usage of migrate:
-		1.1. apply any changes to the db.Model without affecting the existing data, like add/delete columns from db.Model
+		1.1. manipulate database with class, objects instead of table and sql(like add/delete columns from db.Model)
 		
 	2. setup migrate commands
 		1.1. import libs
@@ -181,8 +188,9 @@ This will keep all the notes while I am learning coding with Flask
 		manager.add_command('db', MigrateCommand)
 
 	3. apply migrate command in console
-		python app.py db migrate -m 'any msg'
-		python app.py db upgrade/downgrade # make the migrate take effects
+		step1: python app.py db init  # this will create a 'migrations' folder and migrate scripts
+		step2: python app.py db migrate -m 'any msg' # this will create tables
+		step3: python app.py db upgrade/downgrade # apply the change for the db.Model
 		python app.py db --help # show up more command hints
 			
 	
@@ -264,5 +272,22 @@ This will keep all the notes while I am learning coding with Flask
 		|config.py
 		|manage.py
 		|requirements.txt
+	
+	# No solid structure for flask project, create structure according to specific project
+
+
+# flask Blueprint extension
+	# main purpose: act as a middle man to construct or extend components or patterns globally in the application
+	
+	1. inititate blueprint
+		from flask import Blueprint
+		auth = Blueprint('auth', __name__)
+		
+
+
+
+
+	
+	
 
 
