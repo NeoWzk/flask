@@ -283,6 +283,45 @@ This will keep all the notes while I am learning coding with Flask
 		from flask import Blueprint
 		auth = Blueprint('auth', __name__)
 		
+	2. register blueprint to the application in app/__init__.py
+		from .auth import auth as auth_blueprint
+		app.register_blueprint(auth_blueprint, url_prefix='/auth') # optional variable url_prefix
+
+
+# email confirmation functions
+	##import note: the action="" in relative form must not defined, if nominated a specific endpoint like 'auth.login', 
+	when the request of confirmation was made, it will not redirect to the confirmation url(?/next=token_string),request.args.get('next')
+	will always return False
+	
+	1. add new column 'confirmed=db.Column(db.Boolean, default=False)'
+	
+	2. generate token
+		1.1. from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+			s = Serializer(current_app.config['SECRET_KEY'])
+			token = s.dumps({'confirm':self.id}) # self.id == User.id
+			
+	3. send token
+		{{ url_for('auth.confirm', token=token, _external=True) }} # _external tell the app to return a complete URL with http/https
+		
+	4. confirm token(decode the Json string and update database)
+		def confirm_token(self, token):
+			s = Serializer(current_app.config['SECRET_KEY'])
+			try:
+				data = s.loads(token)
+				if data.get('confirm') != self.id:
+					return False
+				else:
+					self.confirmed = True
+					db.session.add(self)
+					db.session.commit()
+					return True
+			except:
+				return False
+	
+	
+	
+	
+		
 
 
 
