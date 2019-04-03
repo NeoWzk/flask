@@ -196,6 +196,9 @@ This will keep all the notes while I am learning coding with Flask
 	
 
 #flask_mail
+
+	# DO NOT CONFIGURE SEND_MAIL FUNCTION IN MORE THAN 2 BLUEPRINTS, OR THERE WILL BE 'ImportError cannot import name send_mail'
+	
 	1. mail configurations:
 		configuration options:
 			MAIL_SERVER : default ‘localhost’
